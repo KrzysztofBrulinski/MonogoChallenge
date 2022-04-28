@@ -1,3 +1,5 @@
+# EXERCISE DESCRIPTION
+
 Zadaniem konkursowym jest napisanie skryptu JS, który znajdzie określoną liczbę na podstawie danych wejściowych podanych w pliku tekstowym oraz danych firmy dostępnych na stronie internetowej Monogo.
 
 Po pierwsze, musisz wczytać dane z pliku input.txt (plik ten znajdziesz pod linkiem https://www.monogo.pl/competition/input.txt) za pomocą JS (nie kopiuj zawartości tego pliku!).
@@ -15,3 +17,16 @@ Następnie musisz utworzyć tablicę z liczby, którą wcześniej otrzymałeś, 
 Wynik będzie rezultatem mnożenia indeksu numeru lubelskiego biurowca Monogo w tablicy z punktu 5, wartości, którą otrzymałeś w punkcie 4, oraz długości nazwy firmy "Monogo".
 
 Rozwiązanie prosimy umieścić na swoim repozytorium GitHub lub GitLab i przesłać nam link. Skrypt powinien dać się wywołać za pomocą node.js, a wynik powinien być prezentowany w konsoli za pomocą console.log().
+
+# HOW TO RUN SCRIPT
+
+## RUN
+```
+node challange.mjs
+```
+
+## OR
+
+```
+nodemon challange.mjs
+```
