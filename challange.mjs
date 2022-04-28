@@ -28,8 +28,6 @@ const groupProducts = (products, colors, sizes, key) => {
     return 0;
   });
 
-  //   console.log("groupedData", groupedData);
-
   const reducedData = Object.values(
     groupedData.reduce((accumulator, currentValue) => {
       (accumulator[currentValue[key]] =
@@ -85,17 +83,16 @@ const getMinMultiplyMaxValue = (data) => {
 };
 
 const getSolution = (value) => {
-  const valueAsArray = Array.from(String(value), (num) => Number(num))
+  const valueAsArray = Array.from(String(value), (num) => Number(num));
 
   const solution = valueAsArray.reduce((acc, num, index) => {
-    if(index%2 === 0) acc.push(num);
-    else acc[acc.length-1] += num;
+    if (index % 2 === 0) acc.push(num);
+    else acc[acc.length - 1] += num;
 
     return acc;
   }, []);
 
-return solution;
-
+  return solution;
 };
 
 const reducedData = groupProducts(products, newColors, newSizes, "id");
@@ -103,6 +100,4 @@ const filteredData = filterData(selectedFilters, reducedData);
 const minMultiplyMaxValue = getMinMultiplyMaxValue(filteredData);
 const solution = getSolution(minMultiplyMaxValue);
 
-
-console.log('Solution:', solution);
-
+console.log("Solution:", solution);
