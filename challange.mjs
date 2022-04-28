@@ -82,7 +82,7 @@ const getMinMultiplyMaxValue = (data) => {
   return Math.round(maxValue * minValue);
 };
 
-const getSolution = (value) => {
+const getSolutionArray = (value) => {
   const valueAsArray = Array.from(String(value), (num) => Number(num));
 
   const solution = valueAsArray.reduce((acc, num, index) => {
@@ -98,6 +98,14 @@ const getSolution = (value) => {
 const reducedData = groupProducts(products, newColors, newSizes, "id");
 const filteredData = filterData(selectedFilters, reducedData);
 const minMultiplyMaxValue = getMinMultiplyMaxValue(filteredData);
-const solution = getSolution(minMultiplyMaxValue);
+const solutionArray = getSolutionArray(minMultiplyMaxValue);
 
-console.log("Solution:", solution);
+const MonogoOfficeAddressNumber = 14;
+const monogoCompanyName = "Monogo";
+
+const solution =
+  solutionArray.findIndex((item) => item === MonogoOfficeAddressNumber) *
+  minMultiplyMaxValue *
+  monogoCompanyName.length;
+
+console.log("solution:", solution);
